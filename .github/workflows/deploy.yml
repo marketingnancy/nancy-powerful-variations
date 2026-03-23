@@ -1,0 +1,119 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Create combined site directory
+        run: mkdir -p _site
+
+      - name: Build Variation 1
+        run: |
+          cd nancy-powerful-variations1-andrei
+          npm install --legacy-peer-deps
+          npx vite build --base=/nancy-powerful-variations/v1/
+          cp -r dist/public ../_ site/v1 2>/dev/null || cp -r dist ../_site/v1
+
+      - name: Build Variation 2
+        run: |
+          cd nancy-powerful-variations2-andrei
+          npm install --legacy-peer-deps
+          npx vite build --base=/nancy-powerful-variations/v2/
+          cp -r dist/public ../_site/v2 2>/dev/null || cp -r dist ../_site/v2
+
+      - name: Build Variation 3
+        run: |
+          cd nancy-powerful-variations3-andrei
+          npm install --legacy-peer-deps
+          npx vite build --base=/nancy-powerful-variations/v3/
+          cp -r dist/public ../_site/v3 2>/dev/null || cp -r dist ../_site/v3
+
+      - name: Build Variation 4
+        run: |
+          cd nancy-powerful-variations4-andrei
+          npm install --legacy-peer-deps
+          npx vite build --base=/nancy-powerful-variations/v4/
+          cp -r dist/public ../_site/v4 2>/dev/null || cp -r dist ../_site/v4
+
+      - name: Build Variation 5
+        run: |
+          cd nancy-powerful-variations5-andrei
+          npm install --legacy-peer-deps
+          npx vite build --base=/nancy-powerful-variations/v5/
+          cp -r dist/public ../_site/v5 2>/dev/null || cp -r dist ../_site/v5
+
+      - name: Create index page
+        run: |
+          cat > _site/index.html << 'HTMLEOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Nancy LEM - Landing Page Variations</title>
+            <style>
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body { font-family: system-ui, sans-serif; background: #FAFF00; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+              .container { max-width: 800px; padding: 40px; }
+              h1 { font-size: 3rem; font-weight: 900; text-transform: uppercase; margin-bottom: 2rem; line-height: 0.9; }
+              .card { background: white; border: 4px solid black; padding: 24px; margin-bottom: 16px; box-shadow: 8px 8px 0px 0px rgba(0,0,0,1); transition: transform 0.2s; }
+              .card:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0px 0px rgba(0,0,0,1); }
+              .card a { text-decoration: none; color: black; display: block; }
+              .card h2 { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 8px; }
+              .card p { font-size: 1rem; color: #666; }
+              .badge { display: inline-block; background: #FF0099; color: white; padding: 4px 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border: 2px solid black; margin-bottom: 8px; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>Nancy LEM<br>A/B Test Variations</h1>
+              <div class="card"><a href="v1/"><span class="badge">V1</span><h2>The Broken Promise</h2><p>Pain-First — Lead with frustration and identity validation</p></a></div>
+              <div class="card"><a href="v2/"><span class="badge">V2</span><h2>The Clinical Case</h2><p>Authority/Science — Clinical data and expert endorsement</p></a></div>
+              <div class="card"><a href="v3/"><span class="badge">V3</span><h2>The Accidental Discovery</h2><p>Story-Driven — First-person narrative journey</p></a></div>
+              <div class="card"><a href="v4/"><span class="badge">V4</span><h2>Become Her</h2><p>Empowerment — Aspirational transformation and identity shift</p></a></div>
+              <div class="card"><a href="v5/"><span class="badge">V5</span><h2>The Big Lie</h2><p>Myth-Busting — Counter-intuitive revelations and education</p></a></div>
+            </div>
+          </body>
+          </html>
+          HTMLEOF
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
