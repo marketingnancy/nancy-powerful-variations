@@ -16,7 +16,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={HomeV4} />
       <Route path={"/control"} component={Home} />
-      <Route path={"/v1"} component={HomeV4} />
+      <Route path={"/v1"} component={HomeV1} />
       <Route path={"/v2"} component={HomeV2} />
       <Route path={"/v3"} component={HomeV3} />
       <Route path={"/v4"} component={HomeV4} />
