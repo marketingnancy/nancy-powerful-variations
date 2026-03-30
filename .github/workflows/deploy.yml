@@ -34,7 +34,7 @@ jobs:
           cd nancy-powerful-variations1-andrei
           npm install --legacy-peer-deps
           npx vite build --base=/nancy-powerful-variations/v1/
-          cp -r dist/public ../_ site/v1 2>/dev/null || cp -r dist ../_site/v1
+          cp -r dist/public ../_site/v1 2>/dev/null || cp -r dist ../_site/v1
 
       - name: Build Variation 2
         run: |
