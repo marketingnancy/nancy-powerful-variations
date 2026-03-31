@@ -112,7 +112,7 @@ export default function HomeV3() {
               <div className="absolute inset-0 bg-primary transform rotate-3 border-4 border-black translate-x-4 translate-y-4 z-0"></div>
               <div className="relative z-10 bg-white border-4 border-black p-2">
                 <img
-                  src="/images/hero_bedsheets.jpg"
+                  src="/images/win_bedsheet_michele.jpg"
                   alt="Nancy LEM Device"
                   className="w-full h-auto object-cover border-2 border-black"
                 />
@@ -288,7 +288,7 @@ export default function HomeV3() {
             <div className="relative">
               <div className="absolute inset-0 bg-primary transform translate-x-4 translate-y-4 border-4 border-black"></div>
               <div className="relative z-10 bg-white border-4 border-black p-2">
-                <img src="/images/fruit_bowl.jpg" alt="Beginner Friendly" className="w-full h-auto object-cover border-2 border-black" />
+                <img src="/images/win_catherine_review.jpeg" alt="Beginner Friendly" className="w-full h-auto object-cover border-2 border-black" />
                 <div className="absolute bottom-8 left-8 right-8 bg-white border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <div className="space-y-3 text-sm font-medium">
                     <div className="bg-[#F0F0F0] rounded-2xl rounded-bl-none p-3 max-w-[85%] border-2 border-black">
@@ -341,7 +341,7 @@ export default function HomeV3() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="col-span-2 row-span-2 relative group overflow-hidden border-4 border-white">
-              <img src="/images/pdp11.jpg" alt="Lifestyle" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src="/images/win_waterproof.jpg" alt="Lifestyle" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
                 <h3 className="text-3xl font-black uppercase text-white">Waterproof &<br/>Bath Ready</h3>
               </div>
@@ -391,7 +391,7 @@ export default function HomeV3() {
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-black transform translate-x-4 translate-y-4 border-4 border-black"></div>
-            <img src="/images/discreet_packaging2.jpg" alt="Unboxing" className="relative z-10 w-full h-auto border-4 border-black" />
+            <img src="/images/pdp_meet_lem.jpg" alt="Unboxing" className="relative z-10 w-full h-auto border-4 border-black" />
           </div>
         </div>
       </section>
@@ -592,7 +592,7 @@ export default function HomeV3() {
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-black overflow-hidden">
-                  <img src="/images/review9.jpg" className="w-full h-full object-cover" />
+                  <img src="/images/win_roses_sorry.jpg" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <div className="font-bold text-sm">Sarah M.</div>
@@ -611,7 +611,7 @@ export default function HomeV3() {
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-black overflow-hidden">
-                  <img src="/images/review10.jpg" className="w-full h-full object-cover" />
+                  <img src="/images/win_connie_review.jpg" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <div className="font-bold text-sm">Jessica K.</div>
@@ -630,7 +630,7 @@ export default function HomeV3() {
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-black overflow-hidden">
-                  <img src="/images/review1.jpg" className="w-full h-full object-cover" />
+                  <img src="/images/ugc_julw4_60.jpg" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <div className="font-bold text-sm">Emily R.</div>

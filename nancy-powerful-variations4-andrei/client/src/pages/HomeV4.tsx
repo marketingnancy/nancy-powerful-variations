@@ -111,7 +111,7 @@ export default function HomeV4() {
               <div className="absolute inset-0 bg-primary transform rotate-3 border-4 border-black translate-x-4 translate-y-4 z-0"></div>
               <div className="relative z-10 bg-white border-4 border-black p-2">
                 <img
-                  src="/images/energy_waves.jpg"
+                  src="/images/win_raspberry.jpg"
                   alt="Nancy LEM Device"
                   className="w-full h-auto object-cover border-2 border-black"
                 />
@@ -271,7 +271,7 @@ export default function HomeV4() {
             <div className="relative">
               <div className="absolute inset-0 bg-primary transform translate-x-4 translate-y-4 border-4 border-black"></div>
               <div className="relative z-10 bg-white border-4 border-black p-2">
-                <img src="/images/no_age_limit.jpg" alt="Transformation" className="w-full h-auto object-cover border-2 border-black" />
+                <img src="/images/win_zero_to_o.jpeg" alt="Transformation" className="w-full h-auto object-cover border-2 border-black" />
                 <div className="absolute bottom-8 left-8 right-8 bg-white border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <h3 className="text-2xl font-black uppercase mb-2">"I became her..."</h3>
                   <p className="text-lg font-medium italic mb-4">
@@ -322,7 +322,7 @@ export default function HomeV4() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="col-span-2 row-span-2 relative group overflow-hidden border-4 border-white">
-              <img src="/images/pdp11.jpg" alt="Lifestyle" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src="/images/win_waterproof.jpg" alt="Lifestyle" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
                 <h3 className="text-3xl font-black uppercase text-white">Waterproof &<br/>Bath Ready</h3>
               </div>
@@ -369,7 +369,7 @@ export default function HomeV4() {
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-black transform translate-x-4 translate-y-4 border-4 border-black"></div>
-            <img src="/images/product_clean.jpg" alt="Unboxing" className="relative z-10 w-full h-auto border-4 border-black" />
+            <img src="/images/pdp_meet_lem.jpg" alt="Unboxing" className="relative z-10 w-full h-auto border-4 border-black" />
           </div>
         </div>
       </section>
@@ -524,7 +524,7 @@ export default function HomeV4() {
             <div className="order-2 md:order-1">
               <div className="relative">
                 <div className="absolute inset-0 bg-black transform translate-x-4 translate-y-4"></div>
-                <img src="/images/meet_lem_slices.jpg" alt="Air Suction Technology" className="relative z-10 border-4 border-black w-full" />
+                <img src="/images/win_raspberry_lifestyle.jpg" alt="Air Suction Technology" className="relative z-10 border-4 border-black w-full" />
               </div>
             </div>
             <div className="order-1 md:order-2 space-y-12">
